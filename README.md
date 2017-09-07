@@ -1,5 +1,8 @@
 # installing-Ruby
 
+- [Mac OSX](#mac-osx)
+- [Windows](#windows)
+
 # Mac OSX
 Good news, everyone! If you have a Mac, you already have Ruby installed! The bad news is that it's probably an older version unless you have updated it somehow already. The latest macOS has Ruby 2.0.0, I believe. For the course, that will work, but the latest is 2.4.1, and who doesn't want the latest?
 
@@ -142,7 +145,7 @@ While not as mature as Homebrew and those GNU/Linux package managers, Chocolatey
 ```posh
 > Set-ExecutionPolicy AllSigned; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
-This command executes the nested expression `((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`. The inner expression downloads the script for installing chocolatey, and the outer expression executes it. The execution policy is the strategy Windows uses for determining which scripts can be executed (e.g. they must be digitally signed by a trusted publisher). By default it is set to `Restricted` which means no scripts can run. `AllSigned` means no script can run unless it is digitally signed by a trusted publisher. If you would like to know more about execution policy, see [Microsoft's Documentation](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Security/Set-ExecutionPolicy?view=powershell-6) on the subject.
+This command executes a script nested expression `((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`. The inner expression downloads the script for installing chocolatey, and the outer expression executes it. The execution policy is the strategy Windows uses for determining which scripts can be executed (e.g. they must be digitally signed by a trusted publisher). By default it is set to `Restricted` which means no scripts can run. `AllSigned` means no script can run unless it is digitally signed by a trusted publisher. If you would like to know more about execution policy, see [Microsoft's Documentation](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Security/Set-ExecutionPolicy?view=powershell-6) on the subject.
 If you have any further questions or issues, see the [installation page](http://chocolatey.org/install) for Chocolatey.
 ## Recommended: Chocolatey
 Once Chocolatey is installed, run this command to install ruby:
