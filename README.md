@@ -133,3 +133,26 @@ $ ruby --version
 ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin16]
 ```
 This creates a `.ruby-version` file that can be edited to change the version for that project/folder. You might have to move into and out of that folder to pick up the change if you edit the file directly.
+
+# Windows
+You can get the latest version of ruby either through [Chocolatey](http://chocolatey.org) or through [RubyInstaller](http://rubyinstaller.org). If you already have Chocolatey, I recommend installing it that way as it's just too easy.
+
+## Installing Chocolatey
+While not as mature as Homebrew and those GNU/Linux package managers, Chocolatey is still useful for having one tool that can manage most of the tools you would want to install from the command line with a single command. All you have to do to install it is run the following command in a power shell with elevated permissions:
+```posh
+> Set-ExecutionPolicy AllSigned; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+This command executes the nested expression `((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`. The inner expression downloads the script for installing chocolatey, and the outer expression executes it. The execution policy is the strategy Windows uses for determining which scripts can be executed (e.g. they must be digitally signed by a trusted publisher). By default it is set to `Restricted` which means no scripts can run. `AllSigned` means no script can run unless it is digitally signed by a trusted publisher. If you would like to know more about execution policy, see [Microsoft's Documentation](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Security/Set-ExecutionPolicy?view=powershell-6) on the subject.
+If you have any further questions or issues, see the [installation page](http://chocolatey.org/install) for Chocolatey.
+## Recommended: Chocolatey
+Once Chocolatey is installed, run this command to install ruby:
+```posh
+> choco install ruby
+...
+> ruby -v
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x64-mingw32]
+```
+Then you may have to close and re-open powershell in order to pick up the changes Chocolatey made to the PATH environment variable. Otherwise, if you see the version number similar to the above, you are done!
+
+## Alternative: RubyInstaller
+TODO
