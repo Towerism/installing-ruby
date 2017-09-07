@@ -20,7 +20,7 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 \curl -sSL https://get.rvm.io | bash -s stable
 ```
 
-After `rvm` is installed, run this command to load it
+After `rvm` is installed, run this command to load it (or reload your terminal. You only have to do this once, afterwards it will just work)
 
 ``` bash
 source ~/.rvm/scripts/rvm
