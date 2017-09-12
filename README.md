@@ -158,4 +158,9 @@ ruby 2.4.1p111 (2017-03-22 revision 58053) [x64-mingw32]
 Then you may have to close and re-open powershell in order to pick up the changes Chocolatey made to the PATH environment variable. Otherwise, if you see the version number similar to the above, you are done!
 
 ## Alternative: RubyInstaller
-TODO
+Alternatively you can download an installer from [RubyInstaller.org](https://www.rubyinstaller.org). You should download the latest version for 64-bit which (at the time of writing) is *Ruby 2.4.1-2 (x64)*. Simply follow the instructions to install Ruby. However, make sure that **Add Ruby executables to your PATH** is checked when selecting the install destination. Then you should be able to check your ruby version to make sure everything installed properly:
+```posh
+> ruby -v
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x64-mingw32]
+```
+If you had any troubles or any questions about the installer, you can view the FAQ [here](https://github.com/oneclick/rubyinstaller2/wiki/FAQ).
